@@ -1,0 +1,11 @@
+{% extends "@App/Form/form.html.twig" %}
+
+{% block description %}
+    <p>
+        A simple yes/no choice via radio buttons which will trigger show/hide of a password field.
+    </p>
+    <p>
+        For debugging reasons a TextType is being used instead of PasswordType, because password fields
+        lose it's value after submitting the form.
+    </p>
+{% endblock %}
