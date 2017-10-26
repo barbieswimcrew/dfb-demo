@@ -1,0 +1,14 @@
+# WEBSERVER
+    dfb__apache:
+        container_name: dfb__apache
+        image: dasistweb/symfony:php7.1
+        restart: on-failure
+        working_dir: "/var/www/html/web"
+        ports:
+            - "1000:80"
+        volumes:
+            - "../../dfb__apache/dist:/var/www/html/web"
+        environment:
+            - SYMFONY_ENV=prod
+            - XDEBUG_ENABLED=1
+            - FILEBEAT_ENABLED=0
